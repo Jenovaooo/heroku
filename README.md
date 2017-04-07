@@ -1,11 +1,16 @@
-# README #
+# HEROKY App #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+I lear react native.
 
-### What is this repository for? ###
+### Contact info ###
+Name: Hung
+Email: damhung4492@gmail.com
+FB: fb.com/abcxyzht
+
+### Info ###
 
 * Quick summary
-* Version
+* Version : 1.0
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up? ###
