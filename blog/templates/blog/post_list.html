@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+{% if user.is_authenticated %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <p class="text-right">
+                <a href="{% url 'post_new' %}" class="top-menu">ADD POST <span class="fa fa-plus"></span></a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% block content %}
+    {% for post in posts %}
+        <ul class="post-list">
+            <li class="post-item">
+                <h1 class="post-title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+                 <p class="date">
+                    <i class="fa fa-clock-o"></i>
+                    {{ post.published_date }}
+                </p>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </li>
+        </ul>
+    {% endfor %}
+{% endblock %}

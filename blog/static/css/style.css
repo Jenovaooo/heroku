@@ -1,0 +1,13 @@
+.main-left{
+}
+.main-left ul.post-list{
+    list-style: none;
+    padding-left: 0;
+}
+.main-left ul.post-list li{
+    margin-bottom: 20px;
+}
+.post-title{
+    font-size: 18px;
+    text-transform: uppercase;
+}

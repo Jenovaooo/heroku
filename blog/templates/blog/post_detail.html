@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+
+{% if user.is_authenticated %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <p class="text-right">
+                <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}">EDIT POST <span class="fa fa-pencil-square-o"></span></a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% block content %}
+    <div class="post">
+
+        <h1>{{ post.title }}</h1>
+        {% if post.published_date %}
+            <p class="date">
+                <i class="fa fa-clock-o"></i>
+                {{ post.published_date }}
+            </p>
+        {% endif %}
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}
